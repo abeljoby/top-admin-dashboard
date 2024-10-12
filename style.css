@@ -1,0 +1,108 @@
+:root {
+    --header: rgb(255, 248, 238);
+    --content: antiquewhite;   
+}
+
+* {
+    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    cursor: default;
+}
+
+.dashboard {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10rem 1fr;
+    grid-template-rows: auto 1fr;
+}
+
+.sidebar {
+    padding: 15px;
+    display: grid;
+    grid-template-rows: 4em repeat(auto-fit,2em);
+    grid-row: 1 / 3;
+    color: antiquewhite;
+    background-color: rgb(20, 10, 70);
+}
+
+.menu-item {
+    cursor: pointer;
+}
+
+.heading {
+    font-size: larger;
+    cursor: default;
+}
+
+.header {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    /* grid-auto-rows: auto; */
+    gap: 15px;
+    padding: 15px;
+    background-color: rgb(255, 248, 238);
+    width: 100%;
+    border-bottom: solid rgba(128, 128, 128, 0.373);
+}
+
+#search {
+    cursor: text;
+    box-sizing: border-box;
+    padding-left: 1rem;
+    color: white;
+    background-color: rgb(217, 217, 217);
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#profile {
+    /* margin-right: 30px; */
+    line-height: 2rem;
+    display: flex;
+    gap: 10px;
+}
+
+
+#avatar {
+    vertical-align: middle;
+    width: 2rem;
+    border-radius: 100%;
+}
+
+.content {
+    background-color: antiquewhite;
+    padding: 15px;
+    overflow: scroll;
+}
+
+.content span {
+    line-height: 2em;
+    font-weight: bold;
+}
+
+.documents {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.card {
+    box-sizing: border-box;
+    background-color: var(--header);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 15px 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    word-break: break-all;
+}
+
